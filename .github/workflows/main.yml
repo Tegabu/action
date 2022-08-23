@@ -1,0 +1,18 @@
+name: practice
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Here is the deployment action
+      - name: Upload from Site 1 via FTP
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: ${{ ftp.onion.ke }}
+          user: ${{ yohannese@onion.ke }}
+          password: ${{ 7X4r).;X$V6x }}
+          local_dir: "./Site 1"
+          delete: "false"
